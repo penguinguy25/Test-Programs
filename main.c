@@ -36,14 +36,15 @@ int main() {
 
     // main menu
     void menu() {
-        int choice;
+        char choice[1];
         while(1) {
             printf("County game practice program --- C test\nSelect an option:\n1.The game\n2.(this doesnt exist lol)\n> ");
-            scanf("%d", &choice);
-            if (choice == 1) {
+            scanf("%s", &choice);
+            if (choice == "1") {
                 // go to the county game
                 county_game();
             } else {
+                // FIXME this literally breaks if you type a non-integer --- PATCHED, all i had to do was change choice to char type lol
                 // otherwise repeat loop
                 printf("That's not an option!\n");
             }
