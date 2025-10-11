@@ -1,4 +1,4 @@
-// nodes and shit
+// nodes and stuff
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -17,7 +17,7 @@ int main() {
     node2->data = 16;
     node3->data = 21;
 
-    // fuck uh pointers shit idk
+    // dang uh pointers stuff idk
     node1->next = node2;
     node2->next = node3;
     node3->next = NULL;
@@ -38,3 +38,4 @@ int main() {
 
     return 0;
 }
+
