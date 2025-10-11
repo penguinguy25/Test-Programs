@@ -14,17 +14,9 @@
 int main() {
 
     // stuff that start with the letter B
-    char counties[] = {"bed", "bear", "bored"};
+    char counties[3][5] = {"bed", "bear", "bored"};
 
 
-    // main menu
-    void menu() {
-        while(1) {
-            printf("County game practice program --- C test\nSelect an option:\n1.The game\n2.(this doesnt exist lol)\n> ");
-
-        }
-
-    }
 
     // game function
     void county_game() {
@@ -40,7 +32,27 @@ int main() {
             scanf("%s", &county);
 
         }
+    }
 
+    // main menu
+    void menu() {
+        int choice;
+        while(1) {
+            printf("County game practice program --- C test\nSelect an option:\n1.The game\n2.(this doesnt exist lol)\n> ");
+            scanf("%d", &choice);
+            if (choice == 1) {
+                // go to the county game
+                county_game();
+            } else {
+                // otherwise repeat loop
+                printf("That's not an option!\n");
+            }
+        }
 
     }
+
+
+    // main program execution
+    menu();
+    return 0;
 }
