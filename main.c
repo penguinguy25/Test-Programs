@@ -10,10 +10,10 @@
 // Cya!
 
 #include <stdio.h>
+#include <string.h>
 
 
-
-// game function
+    // game function
     void county_game() {
         // defining some stuff before the actual game
         // array for game_counties
@@ -31,13 +31,14 @@
 
 
 
-// main menu
+    // main menu
     void menu() {
         char choice[1];
         while(1) {
             printf("County game practice program --- C test\nSelect an option:\n1.The game\n2.(this doesnt exist lol)\n> ");
             scanf("%s", &choice);
-            if (choice == "1") {
+            int comparison = strcmp(choice, "1"); // did some stuff with strcmp
+            if (comparison == 0) {  // also fixed some stuff here
                 // go to the county game
                 county_game();
             } else {
