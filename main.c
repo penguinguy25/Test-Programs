@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 #include <string.h>
-
+#include <stdlib.h>
 
     // game function
     void county_game() {
@@ -33,19 +33,21 @@
 
     // main menu
     void menu() {
-        char choice[1];
+        char* choice = malloc(2); // char choice[2] for the null terminator
         while(1) {
             printf("County game practice program --- C test\nSelect an option:\n1.The game\n2.(this doesnt exist lol)\n> ");
-            scanf("%s", &choice);
-            int comparison = strcmp(choice, "1"); // did some stuff with strcmp
-            if (comparison == 0) {  // also fixed some stuff here
-                // go to the county game
-                county_game();
-            } else {
-                // FIXME this literally breaks if you type a non-integer --- PATCHED, all i had to do was change choice to char type lol
-                // otherwise repeat loop
+                fgets(choice, 2, stdin); // new input with fgets also modified this
+            choice[strcspn(choice, "\n")] = 0; // removing newline
+            int choice_int = atoi(choice); // converting because BLAZINGLY FAST
+
+            switch (choice_int) { // switch casing choice_int!!!!!!!!111
+            case 1: // first case in case choice_int == 1
+                county_game(); // FIXME pls fix this this is probably so cursed and doesnt work anyway hehe
+
+            default:
                 printf("That's not an option!\n");
             }
+            // add some default stuff or something in case choice_int is none of the cases
         }
 
     }
