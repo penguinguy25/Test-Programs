@@ -15,46 +15,45 @@
 
 // game function
 void county_game() {
-    // defining some stuff before the actual game
-    // array for game_counties
+    // stores counties
     char county[5];
+    // array to store game counties
     char game_counties[3];
 
-    // main game
-    // main loop
+    // main game loop
     while(1) {
         printf("Guess a word!\n> ");
         scanf("%s", &county);
-
     }
 }
-
 
 // main menu
 void menu() {
     char choice[2]; // char choice[2] for the null terminator
-    while(1) {
-        printf("County game practice program --- C test\nSelect an option:\n1.The game\n2.(this doesnt exist lol)\n> ");
-        fgets(choice, 2, stdin); // new input with fgets also modified this
-        choice[strcspn(choice, "\n")] = 0; // removing newline
-        int choice_int = atoi(choice); // converting because BLAZINGLY FAST
 
-        switch (choice_int) { // switch casing choice_int!!!!!!!!111
-        case 1: // first case in case choice_int == 1
-            county_game(); // FIXME pls fix this this is probably so cursed and doesnt work anyway hehe
-            // DEBUG ^^^^^^^^^^^^^^^ add county_game(); back
+    // main loop
+    while(1) {
+        printf("County game practice program --- C test\nSelect an option:\n1.The game\n2.(not yet made)\n> ");
+        fgets(choice, 2, stdin); // input function for menu selection
+        choice[strcspn(choice, "\n")] = 0; // removing newline from previous statement
+        int choice_int = atoi(choice); // converting to integer for speed and for switch casing
+
+        // switch case for choice_int
+        switch (choice_int) {
+        case 1:
+            county_game();
+
+        // default case
         default:
             printf("That's not an option!\n");
         }
-        // add some default stuff or something in case choice_int is none of the cases
     }
 }
 
 int main() {
 
-    // stuff that start with the letter B
+    // the "counties" which the user has to guess
     char counties[3][5] = {"bed", "bear", "bored"};
-
 
     // main program execution
     menu();
