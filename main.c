@@ -11,14 +11,9 @@
 
 #include <stdio.h>
 
-int main() {
-
-    // stuff that start with the letter B
-    char counties[3][5] = {"bed", "bear", "bored"};
 
 
-
-    // game function
+// game function
     void county_game() {
         // defining some stuff before the actual game
         // array for game_counties
@@ -34,7 +29,9 @@ int main() {
         }
     }
 
-    // main menu
+
+
+// main menu
     void menu() {
         char choice[1];
         while(1) {
@@ -51,6 +48,12 @@ int main() {
         }
 
     }
+
+int main() {
+
+    // stuff that start with the letter B
+    char counties[3][5] = {"bed", "bear", "bored"};
+
 
 
     // main program execution
