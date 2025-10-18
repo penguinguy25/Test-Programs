@@ -66,13 +66,30 @@ int nor(int bit1, int bit2)
     }
 }
 
+// XOR gate
+int xor(int bit1, int bit2)
+{
+    if(bit1 == 1 && bit2 == 0)
+    {
+        return 1;
+    }
+    else if(bit1 == 0 && bit2 == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
 // main program execution
 int main()
 {
 
-    printf("%d\n", nor(0, 1));
-    printf("%d\n", nor(1, 1));
-    printf("%d\n", nor(0, 0));
+    printf("%d\n", xor(0, 1));
+    printf("%d\n", xor(1, 1));
+    printf("%d\n", xor(0, 0));
 
     return 0;
 }
