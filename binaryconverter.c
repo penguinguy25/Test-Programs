@@ -9,13 +9,18 @@ char* converter(char* str)
     }
     else
     {
-
+        int len = strlen(str);
+        for(int i = 0; i < len; i++)
+        {
+            printf("%c", str[i]);
+        }
+        return 0;
     }
 }
 
 // main
 int main()
 {
-    printf("%s\n", converter(""));
+    printf("%s\n", converter("101010"));
     return 0;
 }
