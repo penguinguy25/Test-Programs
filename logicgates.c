@@ -99,10 +99,8 @@ int xnor(int bit1, int bit2)
 // main program execution
 int main()
 {
-
-    printf("%d\n", xnor(0, 1));
-    printf("%d\n", xnor(1, 1));
-    printf("%d\n", xnor(0, 0));
+    // print statement added for a test run for whomever uses this project
+    printf("%d\n", xor(1, 0));
 
     return 0;
 }
