@@ -83,13 +83,26 @@ int xor(int bit1, int bit2)
     }
 }
 
+// XNOR gate
+int xnor(int bit1, int bit2)
+{
+    if(bit1 == bit2)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
 // main program execution
 int main()
 {
 
-    printf("%d\n", xor(0, 1));
-    printf("%d\n", xor(1, 1));
-    printf("%d\n", xor(0, 0));
+    printf("%d\n", xnor(0, 1));
+    printf("%d\n", xnor(1, 1));
+    printf("%d\n", xnor(0, 0));
 
     return 0;
 }
