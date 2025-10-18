@@ -52,13 +52,27 @@ int or(int bit1, int bit2)
         return 0;
     }
 }
+
+// NOR gate
+int nor(int bit1, int bit2)
+{
+    if(bit1 == 1 || bit2 == 1)
+    {
+        return 0;
+    }
+    else
+    {
+        return 1;
+    }
+}
+
 // main program execution
 int main()
 {
 
-    printf("%d\n", or(0, 1));
-    printf("%d\n", or(1, 1));
-    printf("%d\n", or(0, 0));
+    printf("%d\n", nor(0, 1));
+    printf("%d\n", nor(1, 1));
+    printf("%d\n", nor(0, 0));
 
     return 0;
 }
