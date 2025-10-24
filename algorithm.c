@@ -9,7 +9,13 @@ int convert(char *binary_str)
     int ascii = 0;
 
     // length
-    if(strlen(binary_str) == 0)
+    // optimization 1: manually checked length
+    int length = 0;
+    while(binary_str[length] != '\0')
+    {
+        length++;
+    }
+    if(length == 0)
     {
         printf("String empty\n");
     }
